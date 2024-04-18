@@ -1,20 +1,8 @@
-
 #!/usr/bin/env python3
-"""
-Complex types - functions
-Write typed-annotated function make_multiplier
-takes float multiplier argument
-Returns function that multiplies a float by a multipier
-"""
+"""Type-annotated function make_multiplier"""
 from typing import Callable
 
 
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
-    """
-    Typed-annotated function
-    make_multiplier
-    """
-
-    def fn(num: float):
-        return num * multiplier
-    return fn
+    """Returns a function that multiplies the float"""
+    return lambda x: x * multiplier
